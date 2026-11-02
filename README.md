@@ -36,7 +36,7 @@ After the VM was built, I opened it up
 
 The virtual machine successfully started and I selected "Arch Linux install medium" and it imediately put out an error message and stopped working. My capslock button was flashing on an off, which indicates some sort of error. I restarted multiple times but got the same error everytime.
 
-Error message here
+![Boot Error](./BootError.png)
 
 I tried changing the firmware from BIOS to UEFI and the boot still failed. 
 
@@ -80,7 +80,7 @@ Finally I set the EFI partition to be FAT32 using `mkfs.fat /dev/sda1`
 
 `lsblk -f` gave the following result:
 
-
+![Disk Partitions](./PartitionedDisk.png)
 
 I also reran the command `mkfs.fat -F 32 /dev/sda1` just to make sure it was FAT32 but I don't think that changed anything.
 
